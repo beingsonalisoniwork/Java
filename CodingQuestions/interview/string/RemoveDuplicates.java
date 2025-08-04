@@ -4,8 +4,17 @@ import java.util.LinkedHashSet;
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
-        String str = "Hheeellllooooo,,0099322!!";
+        String str = " "; 
+        // "aaaaaa", "aabbbcccc", " ", "1122!!@@##",  
         
+
+        // Ques : Keep only one digit, one symbol, one letter
+        // For category based de-duplication use Character.isDigit(), Character.isLetter()
+        // Type	Examples
+        // Punctuation	!, ., ,, ?, :
+        // Symbols	@, #, $, %, &, *, ^, etc.
+        // Whitespace	' ', \t, \n (not always included)
+        // Other non-printables	ASCII control characters, etc.
 
         // using collection LinkedHashSet:
         LinkedHashSet<Character> charSet = new LinkedHashSet<>(); // preserves order and uniqueness

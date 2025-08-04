@@ -2,7 +2,9 @@ package interview.string;
 
 public class ReverseString {
     public static void main(String[] agrs) {
-        String str = "Hello, World!";
+        String str = " c3b2a1 ";
+        
+        // "", "a", " ", "123abc!@", "mañana"
 
         String newStr = reverseString(str);
         System.out.println("reversed string = " + newStr);
@@ -24,6 +26,8 @@ public class ReverseString {
     // O(n2) due to repeated copying
 
     public static String reverseString(String str) {
+        if(str == null) return "";
+
         StringBuilder newStr = new StringBuilder();
         for(int i = str.length()-1; i >= 0; i--) {
             newStr.append(str.charAt(i));
