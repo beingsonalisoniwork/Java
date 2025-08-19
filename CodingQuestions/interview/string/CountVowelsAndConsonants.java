@@ -9,10 +9,11 @@ public class CountVowelsAndConsonants {
         printCountOfConsonantsAndVowels("abc123!");
         printCountOfConsonantsAndVowels("xyz");
         printCountOfConsonantsAndVowels(null);
-        printCountOfConsonantsAndVowels("ÁÉÍÓÚ");
+        // printCountOfConsonantsAndVowels("ÁÉÍÓÚ");
 
         String str = "hello there!";
         str = str.toLowerCase().replaceAll("[^a-z]", "");
+        System.out.println(str);
         System.out.println("consonants = " + fetchConsonantsCount(str) + ", vowels = " + fetchVowelsCount(str));
     }
 
@@ -24,9 +25,9 @@ public class CountVowelsAndConsonants {
             return;
         }
 
-        // for last case, as Á = a + accent > to remove the accent
-        str = Normalizer.normalize(str, Normalizer.Form.NFD);
-        str = str.replaceAll("\\p{M}", ""); // remove accents
+        // // for last case, as Á = a + accent > to remove the accent
+        // str = Normalizer.normalize(str, Normalizer.Form.NFD);
+        // str = str.replaceAll("\\p{M}", ""); // remove accents
 
         str = str.toLowerCase().replaceAll("[^a-z]", "");
 
@@ -37,6 +38,7 @@ public class CountVowelsAndConsonants {
             else 
                 consonants++;
         }
+        
         System.out.println("consonants = " + consonants + ", vowels = " + vowels);
     }
 

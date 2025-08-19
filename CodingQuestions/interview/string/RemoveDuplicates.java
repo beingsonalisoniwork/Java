@@ -1,6 +1,7 @@
 package interview.string;
 
 import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class RemoveDuplicates {
         // Other non-printables	ASCII control characters, etc.
 
         // using collection LinkedHashSet:
-        LinkedHashSet<Character> charSet = new LinkedHashSet<>(); // preserves order and uniqueness
+        Set<Character> charSet = new LinkedHashSet<>(); // preserves order and uniqueness
         for(char ch : str.toCharArray()) {
             charSet.add(ch);
         }

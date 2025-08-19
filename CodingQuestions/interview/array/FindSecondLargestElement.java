@@ -26,7 +26,7 @@ public class FindSecondLargestElement {
         }
 
         if (secondLargest == Integer.MIN_VALUE) {
-            System.out.println("No second largest number exists");
+            System.out.println("All elements are equal, not second largest number found");
         } else {
             System.out.println(secondLargest);
         }
